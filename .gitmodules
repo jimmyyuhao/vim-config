@@ -7,3 +7,15 @@
 [submodule "vimTools/ThirdPartyTools/Bear"]
 	path = vimTools/ThirdPartyTools/Bear
 	url = https://github.com/rizsotto/Bear.git
+[submodule "vimTools/ThirdPartyTools/ctags-win32"]
+	path = vimTools/ThirdPartyTools/ctags-win32
+	url = https://github.com/universal-ctags/ctags-win32.git
+[submodule "vimTools/ThirdPartyTools/ctags"]
+	path = vimTools/ThirdPartyTools/ctags
+	url = https://github.com/universal-ctags/ctags.git
+[submodule "vimTools/ThirdPartyTools/cppcheck"]
+	path = vimTools/ThirdPartyTools/cppcheck
+	url = https://github.com/danmar/cppcheck.git
+[submodule "vimTools/ThirdPartyTools/the_silver_searcher"]
+	path = vimTools/ThirdPartyTools/the_silver_searcher
+	url = https://github.com/ggreer/the_silver_searcher.git
