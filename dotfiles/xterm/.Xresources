@@ -1,0 +1,12 @@
+!look and feel
+xterm.termName: xterm-256color
+!fix alt key input
+xterm*altSendsEscape: true
+
+xterm*SelectToClipboard:true
+
+!font and locale
+xterm*faceName: Monaco:antialias=True:pixelsize=15
+xterm*faceNameDoublesize: Microsoft YaHei: antialias=True: pixelsize=16
+
+!xterm*faceNameDoublesize: WenQuanYi Micro Hei:antialias=True:pixelsize=16
