@@ -4,3 +4,6 @@
 [submodule "tmuxTools/.tmux/plugins/tpm"]
 	path = tmuxTools/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vimTools/ThirdPartyTools/Bear"]
+	path = vimTools/ThirdPartyTools/Bear
+	url = https://github.com/rizsotto/Bear.git
