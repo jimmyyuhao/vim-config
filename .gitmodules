@@ -19,3 +19,6 @@
 [submodule "vimTools/ThirdPartyTools/the_silver_searcher"]
 	path = vimTools/ThirdPartyTools/the_silver_searcher
 	url = https://github.com/ggreer/the_silver_searcher.git
+[submodule "vimTools/vim"]
+	path = vimTools/vim
+	url = https://github.com/vim/vim.git
