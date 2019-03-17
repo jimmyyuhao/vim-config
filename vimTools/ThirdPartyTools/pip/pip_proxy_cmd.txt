@@ -1,0 +1,1 @@
+sudo pip install which_package_you_want --proxy=https://username:password@proxy.abc.com

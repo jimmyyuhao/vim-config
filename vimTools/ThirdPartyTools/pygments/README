@@ -1,0 +1,3 @@
+Get Pygments from the Python Package Index, or install it with pip
+cmd:
+pip install Pygments
