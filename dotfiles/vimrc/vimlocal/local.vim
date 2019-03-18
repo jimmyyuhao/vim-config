@@ -32,6 +32,7 @@ endif
 
 set noshowmode "for echodoc
 "If you prefer the scheme to match the original monokai background color, put this in your .vimrc file: 
+colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256=1
 

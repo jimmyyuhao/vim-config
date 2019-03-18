@@ -1,1 +1,1 @@
-imap <leader>v <plug>(EasyClipRing)
+imap <leader>v <Plug>(EasyClipRing)

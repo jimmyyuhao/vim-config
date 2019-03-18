@@ -24,4 +24,4 @@ let g:cpp_concepts_highlight = 1
 "
 let g:cpp_no_function_highlight = 1
 
-let c_curly_error=1
+let c_no_curly_error=1

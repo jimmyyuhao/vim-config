@@ -1,1 +1,1 @@
-nnoremap <leader>json :JsonLineFomateWrite<CR>
+nnoremap <leader>json :JsonLineFormatWrite<CR>

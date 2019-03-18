@@ -1,2 +1,2 @@
-noremap <m-o> :FsHere<CR>
+noremap <m-o> :FSHere<CR>
 
