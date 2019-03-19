@@ -10,5 +10,5 @@ let g:neoformat_cpp_astyle = {
     \'valid_exit_codes':[0,23],
     \'no_append':1
     \}
-let g:neoformat_enable_cpp= ['astyle']
+let g:neoformat_enabled_cpp= ['astyle']
 let g:neoformat_try_formatprg =1
