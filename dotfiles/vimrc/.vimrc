@@ -79,5 +79,5 @@ source ~/mytools/dotfiles/vimrc/vim-json-line-format/vim-json-line-format.vim
 source ~/mytools/dotfiles/vimrc/vim-preview/vim-preview.vim
 source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 source ~/mytools/dotfiles/vimrc/wmgraphviz/wmgraphviz.vim
-source ~/mytools/dotfiles/vimrc/workspace/worksapce.vim
+source ~/mytools/dotfiles/vimrc/workspace/workspace.vim
 source ~/mytools/dotfiles/vimrc/youcompleteme/youcompleteme.vim
