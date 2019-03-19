@@ -1,1 +1,1 @@
-let g:AutoPairShortcutToggle = ''
+let g:AutoPairsShortcutToggle = ''
