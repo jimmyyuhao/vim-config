@@ -2,7 +2,7 @@ let g:Lf_ShortcutF = '<c-p>'
 
 noremap <leader>f :LeaderfFunction!<cr>
 
-noremap <m-p> :LeaderfMru!<cr>
+noremap <m-p> :LeaderfMru<cr>
 noremap <m-n> :LeaderfBuffer<cr>
 noremap <m-m> :LeaderfTag<cr>
 
