@@ -7,6 +7,9 @@ ln -s ~/mytools/dotfiles/xterm/.Xresources ~/.Xresources
 ln -s ~/mytools/vimTools/.vim/  ~/.vim
 ln -s ~/mytools/zshTools/.zshrc ~/.zshrc
 
+git submodule init
+git submodule update
+
 sudo apt-get install xterm
 sudo apt-get install tmux
 sudo apt-get install vim
