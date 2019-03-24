@@ -22,3 +22,9 @@
 [submodule "vimTools/vim"]
 	path = vimTools/vim
 	url = https://github.com/vim/vim.git
+[submodule "chromeTools/vimium"]
+	path = chromeTools/vimium
+	url = https://github.com/philc/vimium.git
+[submodule "chromeTools/node"]
+	path = chromeTools/node
+	url = https://github.com/nodejs/node.git

@@ -63,6 +63,7 @@ source ~/mytools/dotfiles/vimrc/gtags/gtags.vim
 source ~/mytools/dotfiles/vimrc/gutentags/gutentags.vim
 source ~/mytools/dotfiles/vimrc/leaderf/leaderf.vim
 source ~/mytools/dotfiles/vimrc/listtoggle/listtoggle.vim
+source ~/mytools/dotfiles/vimrc/mark/mark.vim
 source ~/mytools/dotfiles/vimrc/neoformat/neoformat.vim
 source ~/mytools/dotfiles/vimrc/neomake/neomake.vim
 source ~/mytools/dotfiles/vimrc/nerdtree/nerd.vim
