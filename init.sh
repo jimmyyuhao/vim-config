@@ -14,6 +14,7 @@ sudo apt-get upgrade libc6-dev
 sudo apt-get install binutils
 sudo apt-get install xterm
 sudo apt-get install tmux
+sudo apt-get install kdiff3
 sudo apt-get install vim
 sudo apt-get install connect-proxy
 sudo apt-get install ttf-wqy-zenhei
