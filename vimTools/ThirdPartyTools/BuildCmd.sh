@@ -50,11 +50,19 @@ make CFLAGS+=-std=c99
 #sudo make install # to install
 
 #the_silver_searcher install Cmd
-cd $DIR/the_silver_searcher
+cd $CURDIR/the_silver_searcher
 ./autogen.sh
 ./configure
 make
 #sudo make install # to install
+
+#the astyle install Cmd
+cd $CURDIR/astyle
+tar -xvf astyle_3.1_linux.tar.gz
+cd astyle/build
+cmake ./../
+make
+sudo make install
 
 #pip install Cmd
 cd $CURDIR/pip
@@ -62,7 +70,7 @@ python get-pip.py
 pip install Pygments
 
 #pygment install Cmd
-cd $DIR/Pygments
+cd $CURDIR/Pygments
 pip install Pygments
 
 #
