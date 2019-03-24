@@ -1,4 +1,6 @@
 #!/bin/bash/
+CURDIR=$(cd "$(dirname "$0")";pwd)
+echo in $CURDIR
 #https://github.com/tmux/tmux/wiki
 
 #tmux depends on libevent and ncurses.
@@ -18,12 +20,12 @@
 # sudo make install
 
 
-cd ./tmux/
 sudo apt-get remove tmux
 sudo apt-get install libevent-dev
 sudo apt-get install libncurses5-dev
 sudo apt-get install xsel
 sudo apt-get install xclip
+cd $CURDIR/tmux/
 sh autogen.sh
 ./configure && make
 sudo make install
