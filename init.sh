@@ -10,7 +10,7 @@ ln -s ~/mytools/zshTools/.zshrc ~/.zshrc
 git submodule init
 git submodule update
 
-sudo apt-get upgrade libc6-dev
+sudo apt-get install xz-devel
 sudo apt-get install binutils
 sudo apt-get install xterm
 sudo apt-get install tmux
