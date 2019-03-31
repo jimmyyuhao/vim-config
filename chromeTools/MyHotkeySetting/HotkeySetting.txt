@@ -1,0 +1,34 @@
+安装好插件后，通过?键触发设置，点击右上角options。
+将下面的设置拷贝覆盖Custom key mappings栏中的内容
+
+# Insert your preferred key mappings here.
+unmap <c-e>
+unmap <c-y>
+unmap d
+unmap u
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+map <c-f> scrollFullPageDown
+map <c-b> scrollFullPageUp
+unmap f
+unmap F
+map <c-g> LinkHints.activateMode
+map <c-G> LinkHints.activateModeToOpenInNewTab
+map <a-g> LinkHints.activateModeToOpenInNewForegroundTab
+#Navigating history
+unmap H
+unmap L
+map <c-o> goBack
+map <c-i> goForward
+unmap yf
+map yu LinkHints.activateModeToCopyLinkUrl
+unmap p
+unmap P
+map pu openCopiedUrlInCurrentTab
+map Pu openCopiedUrlInNewTab
+unmap ^
+map H visitPreviousTab
+unmap x
+unmap X
+map q removeTab
+map Q restoreTab

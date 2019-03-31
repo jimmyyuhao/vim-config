@@ -25,6 +25,7 @@ sudo apt-get install libevent-dev
 sudo apt-get install libncurses5-dev
 sudo apt-get install xsel
 sudo apt-get install xclip
+sudo apt-get install gawk
 cd $CURDIR/tmux/
 sh autogen.sh
 ./configure && make
