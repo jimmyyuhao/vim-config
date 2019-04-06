@@ -28,3 +28,6 @@
 [submodule "chromeTools/node"]
 	path = chromeTools/node
 	url = https://github.com/nodejs/node.git
+[submodule "zshTools/oh-my-zsh"]
+	path = zshTools/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

@@ -2,12 +2,11 @@
 CURDIR=$(cd "$(dirname "$0")";pwd)
 echo in $CURDIR
 
-#BEAR install Cmd
-cd $CURDIR/Bear
-mkdir ./build
-cd build
-cmake ./../bear
-make all
+#BEAR install Cmd ##do not install manully(work inproperly) ,use apt-get install
+#cd $CURDIR/Bear
+#mkdir ./build
+#cd build
+#make 
 #sudo make install # to install
 
 #connect install Cmd
