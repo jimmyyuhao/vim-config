@@ -56,7 +56,7 @@ source ~/mytools/dotfiles/vimrc/ag/ag.vim
 source ~/mytools/dotfiles/vimrc/asyncrun/asyncrun.vim
 source ~/mytools/dotfiles/vimrc/ale/ale.vim
 source ~/mytools/dotfiles/vimrc/auto-pairs/auto-pairs.vim
-source ~/mytools/dotfiles/vimrc/DoxgenToolkit/DoxgenToolkit.vim
+source ~/mytools/dotfiles/vimrc/DoxygenToolkit/DoxygenToolkit.vim
 source ~/mytools/dotfiles/vimrc/easyclipring/easyclipring.vim
 source ~/mytools/dotfiles/vimrc/easymotion/easymotion.vim
 source ~/mytools/dotfiles/vimrc/gtags/gtags.vim
