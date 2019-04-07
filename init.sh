@@ -13,6 +13,12 @@ git submodule update --init  --recursive
 
 sudo apt-get install xz-devel
 sudo apt-get install binutils
+sudo apt-get install binutils-dev
+sudo apt-get install automake
+sudo apt-get install autoconf
+sudo apt-get install libtool
+sudo apt-get install libiberty-dev
+
 sudo apt-get install xterm
 sudo apt-get install tmux
 sudo apt-get install kdiff3
