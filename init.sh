@@ -7,9 +7,9 @@ ln -s ~/mytools/dotfiles/xterm/.Xdefaults ~/.Xdefaults
 ln -s ~/mytools/dotfiles/xterm/.Xresources ~/.Xresources
 ln -s ~/mytools/vimTools/.vim/  ~/.vim
 
-
 git submodule init
 git submodule update
+git submodule update --init  --recursive
 
 sudo apt-get install xz-devel
 sudo apt-get install binutils
