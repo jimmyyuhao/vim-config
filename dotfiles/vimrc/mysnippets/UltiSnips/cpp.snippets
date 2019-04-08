@@ -1,0 +1,19 @@
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+###########################################################################
+#			    Global functions 						  #
+###########################################################################
+snippet snipreadfile "read file (readF)"
+	std::vector<char> v;
+	if (FILE *fp = fopen(${1:"filename"}, "r"))
+	{
+		char buf[1024];
+		while(size_t len = fread(buf, 1, sizeof(buf), fp))
+			v.insert(v.end(), buf, buf + len);
+		fclose(fp);
+	}
+endsnippet

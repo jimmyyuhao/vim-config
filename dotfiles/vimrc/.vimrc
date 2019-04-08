@@ -82,3 +82,4 @@ source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 source ~/mytools/dotfiles/vimrc/wmgraphviz/wmgraphviz.vim
 source ~/mytools/dotfiles/vimrc/workspace/workspace.vim
 source ~/mytools/dotfiles/vimrc/youcompleteme/youcompleteme.vim
+source ~/mytools/dotfiles/vimrc/ultisnips/ultisnips.vim
