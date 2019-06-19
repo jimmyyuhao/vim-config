@@ -67,8 +67,8 @@ sudo make install
 
 #pip install Cmd
 cd $CURDIR/pip
-python get-pip.py
-pip install Pygments
+python get-pip.py --proxy=https://usr:pwd@proxy.abc.com:80
+pip install Pygments --proxy=https://usr:pwd@proxy.abc.com:80
 
 #pygment install Cmd
 cd $CURDIR/Pygments
