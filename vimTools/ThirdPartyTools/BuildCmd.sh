@@ -50,6 +50,8 @@ make CFLAGS+=-std=c99
 
 #the_silver_searcher install Cmd
 cd $CURDIR/the_silver_searcher
+sudo apt-get install libpcre3-dev
+sudo apt-get install liblzma-dev
 ./autogen.sh
 ./configure
 make
