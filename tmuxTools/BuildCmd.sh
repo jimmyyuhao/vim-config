@@ -12,6 +12,8 @@ echo in $CURDIR
 # ./configure
 # make
 # sudo make install
+# 如果共享库文件安装到了/lib或/usr/lib目录下, 那么需执行一下ldconfig命令
+# sudo ldconfig
 #
 # tar -xvf ./ncurses.tar.gz
 # cd ./ncurses-6.1/
