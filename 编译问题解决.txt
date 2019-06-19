@@ -1,0 +1,24 @@
+造成这个问题的原因是gcc和binultils版本不匹配，gcc对应的版本较高，gcc编译后，ld（由binultils决定）进行链接，结果由于binultils版本较低，
+
+无法识别。
+
+解决方法：
+
+1.从https://pkgs.org/download/binutils-2.26下载对应的版本，
+
+wget 下载网址
+
+2.安转
+
+sudo dpkg -i 对应的deb包
+
+3.修改path环境变量
+直接输入
+export PATH="/usr/lib/binutils-2.26/bin:"$PATH
+或者通过修改.bashrc文件:
+
+vim ~/.bashrc
+
+//在最后一行添上：
+
+export PATH=/usr/lib/binutils-2.26/bin:$PATH
