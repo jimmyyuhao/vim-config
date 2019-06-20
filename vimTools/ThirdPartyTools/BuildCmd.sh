@@ -28,7 +28,7 @@ cd $CURDIR/ctags/
 ./autogen.sh
 make
 #sudo make install # to install
-
+#原因是我系统中有两个 ctags。其中一个是 exuberant-ctags,要确保/usr/bin下的是自己需要的，没有就创建软连接
 #gdb install Cmd
 cd $CURDIR/gdb/
 tar -xvf ./gdb-8.2.tar.xz
