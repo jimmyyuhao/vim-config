@@ -7,6 +7,6 @@ xterm*selectToClipboard:true
 
 !font and locale
 xterm*faceName: Monaco:antialias=True:pixelsize=15
-xterm*faceNameDoublesize: Microsoft YaHei: antialias=True: pixelsize=16
-
-!xterm*faceNameDoublesize: WenQuanYi Micro Hei:antialias=True:pixelsize=16
+xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:Regular=True: pixelsize=16
+xterm*locale: zh_CN.UTF-8
+!xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:Regular=True:pixelsize=16
