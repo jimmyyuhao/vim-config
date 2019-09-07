@@ -4,7 +4,8 @@ xterm.termName: xterm-256color
 xterm*altSendsEscape: true
 
 xterm*selectToClipboard:true
-
+xterm*background: black
+xterm*foreground: #000000
 !font and locale
 xterm*faceName: Monaco:antialias=True:pixelsize=15
 xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:Regular=True: pixelsize=16
