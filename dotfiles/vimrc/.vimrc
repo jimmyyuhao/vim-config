@@ -49,6 +49,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'mileszs/ack.vim'
 Plug 'axiaoxin/vim-json-line-format'
+Plug 'kkoomen/vim-doge'
 call plug#end()
 
 source ~/mytools/dotfiles/vimrc/vimlocal/local.vim
