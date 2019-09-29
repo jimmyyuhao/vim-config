@@ -49,6 +49,11 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-repeat'
 Plug 'mileszs/ack.vim'
 Plug 'axiaoxin/vim-json-line-format'
+Plug 'thinca/vim-qfreplace'
+Plug 'xolox/vim-lua-ftplugin'
+Plug 'xolox/vim-misc'
+Plug 'nathanalderson/yang.vim'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'kkoomen/vim-doge'
 call plug#end()
 
