@@ -6,6 +6,7 @@ xterm*altSendsEscape: true
 xterm*selectToClipboard:true
 xterm*background: black
 xterm*foreground: #FFFFFF
+xterm*cursorBlink:true
 !font and locale
 xterm*faceName: Monaco:antialias=True:pixelsize=15
 xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:Regular=True: pixelsize=16
