@@ -1,0 +1,10 @@
++
++For convenience there is an automatic installation script available that installs LLVM for you.
++To install the latest stable version:
++bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
++
++To install a specific version of LLVM:
++wget https://apt.llvm.org/llvm.sh
++chmod +x llvm.sh
++sudo ./llvm.sh <version number>
+
