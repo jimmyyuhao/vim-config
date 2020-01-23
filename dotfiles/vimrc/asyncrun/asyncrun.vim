@@ -8,7 +8,7 @@ let g:asyncrun_rootmarks = ['.svn', '.git', '.root', '_darcs', 'build.xml']
 nnoremap <silent> <F5> :AsyncRun -raw -cwd=$(VIM_FILEDIR) "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
 
 
-"可在项目根目录下创建vimbuild.sh
+"可在项目根目录下创建.root文件  vimbuild.sh
 autocmd FileType cpp nnoremap <silent> <F7> :AsyncRun ./vimbuild.sh <CR>
 autocmd FileType python nnoremap <silent> <F7> :PymodeRun <CR>
 autocmd FileType c nnoremap <silent> <F7> :!gcc % && ./a.out <CR>
