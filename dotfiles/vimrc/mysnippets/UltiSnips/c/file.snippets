@@ -1,0 +1,15 @@
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+snippet snipswitch
+switch (${1:var})
+{
+	case ${2:case1}:
+	break;
+	default:${3}
+	break;
+}
+endsnippet
