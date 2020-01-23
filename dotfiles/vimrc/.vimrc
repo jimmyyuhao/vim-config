@@ -31,7 +31,7 @@ Plug 'ekalinin/dockerfile.vim'
 Plug 'moll/vim-bbye'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rking/ag.vim'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode'
 Plug 'jimmyyuhao/wmgraphviz.vim'
 Plug 'vim-scripts/AnsiEsc.vim'
 Plug 'tpope/tpope-vim-abolish'
