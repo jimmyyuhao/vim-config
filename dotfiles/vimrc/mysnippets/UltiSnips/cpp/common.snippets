@@ -35,13 +35,13 @@ ${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:
 endsnippet
 
 snippet snipforv "$1.begin(), $1.end() (beginend)"
-for(auto iter==${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
+for(auto iter=${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(); iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
 	${VISUAL}$2
 }
 endsnippet
 
 snippet snipforverase "$1.begin(), $1.end() (beginend)"
-for(auto iter==${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
+for(auto iter=${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(); iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
 	if(${3:0==*iter}){
 		iter = $1.erase(iter);
 	}else{
