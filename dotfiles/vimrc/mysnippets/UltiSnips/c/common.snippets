@@ -17,7 +17,7 @@ ${VISUAL}$0
 #endif
 endsnippet
 
-snippet snipmain "main() (main)"
+snippet snipcmain "main() (main)"
 int main(int argc, char *argv[])
 {
 	${VISUAL}$0
@@ -28,10 +28,28 @@ endsnippet
 snippet snipswitch
 switch (${1:var})
 {
-	case ${2:case1}:
+	case ${2:case1}: {
+		break;
+		}
+	case ${3:case2}: {
+		break;
+		}
+	default:{
+		${4}
+	}
 	break;
-	default:${3}
-	break;
+}
+endsnippet
+
+snippet snipdefinewhile0 "define do while 0"
+#define ${VISUAL}${0:name}(${1:param(a,b)}) do{\
+		${2:process like a = a+b;}\
+	}while(0)
+endsnippet
+
+snippet snipwhile "while"
+while(${VISUAL}$0) {
+
 }
 endsnippet
 
@@ -45,22 +63,6 @@ snippet snipforauto "for int loop (forauto)"
 for (${4:auto} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
 	${VISUAL}$0
 }
-endsnippet
-
-snippet sniponce "Include header once only guard"
-#ifndef ${1:`!p
-if not snip.c:
-	import random, string
-	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
-	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
-	snip.rv = ('%s_%s' % (name,rand)).upper()
-else:
-	snip.rv = snip.c`}
-#define $1
-
-${VISUAL}$0
-
-#endif /* end of include guard: $1 */
 endsnippet
 
 snippet snipfprintf "fprintf ..."
@@ -77,7 +79,7 @@ snippet snipstruct "struct"
 }$1;
 endsnippet
 
-snippet snipfunc_c "function_c" b
+snippet snipcfunc "c function" b
 ${1:void} ${2:function_name}($3)
 {
 	${VISUAL}$0
@@ -99,8 +101,24 @@ def get_args(arglist):
 	return args
 endglobal
 
+snippet snipheaderfileonce "Include header once only guard"
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+	snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+	snip.rv = snip.c`}
+#define $1
+
+${VISUAL}$0
+
+#endif /* end of include guard: $1 */
+endsnippet
+
 post_jump "if snip.tabstop == 0 : split_line(snip.tabstops[4].current_text)"
-snippet snipfilehead "File Header" b
+snippet snipcfileheader "File Header" b
 /******************************************************************************
 * File:             `!p snip.rv = fn`
 *
@@ -112,11 +130,11 @@ ${0}
 endsnippet
 
 post_jump "if snip.tabstop == 0 : split_line(snip.tabstops[4].current_text)"
-snippet snipfuncheader "Function Header"
+snippet snipcfuncheader "Function Header"
 /******************************************************************************
 * Function:         $1
 * Description:      ${4:${VISUAL}}
-* Where:`!p 
+* Where:`!p
 snip.rv = ""
 snip >> 2
 args = get_args(t[2])

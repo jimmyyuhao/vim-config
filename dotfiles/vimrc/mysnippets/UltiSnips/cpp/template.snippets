@@ -36,39 +36,4 @@ for(auto iter=${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(); iter!=$1${1/^.*?(
 }
 endsnippet
 
-snippet snipforverase "$1.begin(), $1.end() (beginend)"
-for(auto iter=${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(); iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
-	if(${3:0==*iter}){
-		iter = $1.erase(iter);
-	}else{
-		++iter;
-	}
-}
-endsnippet
-
-snippet snipnamespace "namespace .. (namespace)"
-namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
-{
-	${VISUAL}$0
-}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
-endsnippet
-
-
-snippet tp "template <typename ..> (template)"
-template <typename ${1:_InputIter}>
-endsnippet
-
-snippet snipfuncheader "Basic c++ doxygen function template" b
-/**
-* @brief: ${4:brief}
-*
-* @param: `!p write_docstring_args(t[3],snip)`
-*
-* @return: `!p snip.rv = t[1]`
-*/
-${1:ReturnType} ${2:FunctionName}(${3:param})
-{
-	${0:FunctionBody}
-}
-endsnippet
 # vim:ft=snippets:
