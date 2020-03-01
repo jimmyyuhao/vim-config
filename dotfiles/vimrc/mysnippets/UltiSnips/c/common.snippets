@@ -28,16 +28,15 @@ endsnippet
 snippet snipswitch
 switch (${1:var})
 {
-	case ${2:case1}: {
+	case ${2:case1}: 
 		break;
-		}
-	case ${3:case2}: {
+		
+	case ${3:case2}:
+	case ${4:case3}://multi value one process
 		break;
-		}
-	default:{
-		${4}
-	}
-	break;
+	default:
+		${5}
+		break;
 }
 endsnippet
 
@@ -79,10 +78,32 @@ snippet snipstruct "struct"
 }$1;
 endsnippet
 
+snippet sniptypedefptrtofunc "typedef a pointer to a func"
+typedef ${1:returnType} (*${2:Name})(${3:Params});
+endsnippet
+
 snippet snipcfunc "c function" b
 ${1:void} ${2:function_name}($3)
 {
 	${VISUAL}$0
+}
+endsnippet
+
+snippet snipcfuncvarparam "c var param function" b
+int simple(int num,...)
+{
+	int i, result=0;
+	va_list vl;     //va_list指针，用于va_start取可变参数，为char*
+	va_start(vl,num);       //取得可变参数列表中的第一个值
+	printf("num:%d, vl:%d\n",num,*vl);
+	for (i = 0; i < (num-1); i++){//这里num表示可变参数列表中有多少个参数
+		result = va_arg(vl, int);//这里把vl往后跳过4个字节（sizeof(int)大小）指向下一个参数，返回的是当前参数（而非下
+一个参数）  
+		printf("in for  result:%d,  *vl:%d\n", result, *vl);//这里打印下，可以看出，vl总是指向result后面的那个参数  
+	}
+	va_end(vl);//结束标志  
+
+	return result;
 }
 endsnippet
 

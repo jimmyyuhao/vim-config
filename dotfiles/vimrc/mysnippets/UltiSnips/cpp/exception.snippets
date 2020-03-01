@@ -30,9 +30,27 @@ endglobal
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet snipexceptiontry "exception try"
+snippet sniptrycatchanything "exception try catch anything"
 try{
+	${VISUAL}$0
+}catch (...${1://三个点表示可以捕获任意类型的异常}) {
+	cerr << "there is an error" << endl;
+}
+endsnippet
 
+snippet sniptrycatchmsg "exception try catch msg"
+try{
+	${VISUAL}$0
+}catch (const char* msg${1://捕获异常}) {
+	cerr << msg << endl;
+}
+endsnippet
+
+snippet sniptrycatchoutofrange "exception try catch outofrange"
+try{
+	${VISUAL}$0
+}catch (out_of_range & e) {
+	cerr << e.what() << endl;
 }
 endsnippet
 # vim:ft=snippets:
