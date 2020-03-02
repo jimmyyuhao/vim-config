@@ -2,8 +2,8 @@ let g:Lf_ShortcutF = '<c-p>'
 
 noremap <leader>f :LeaderfFunction!<cr>
 
-noremap <m-p> :LeaderfMru<cr>
-noremap <m-n> :LeaderfBuffer<cr>
+noremap <m-n> :LeaderfMru<cr>
+noremap <m-p> :LeaderfBuffer<cr>
 noremap <m-m> :LeaderfTag<cr>
 
 "gotofile 
@@ -12,11 +12,17 @@ nmap <leader>gf y3e:split<CR><c-w><right><c-p><c-v>
 "gotoline
 nmap gl y3e4w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
 
+nmap <leader>gl y3e4w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
+
+nmap <leader><leader>gl y3e4w"tyaw4b<c-w><left><c-p><c-v><CR>:<c-r>t<CR>
 
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_UseVersionControlTool=0
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_DefaultExternalTool = "ag"
+"let g:Lf_ExternalCommand = 'find "%s" -type f'           " On MacOSX/Linux
+
 let g:Lf_WindowHeight = 0.30
 let g:Lf_CacheDirectory = expand('~/.cache')
 let g:Lf_ShowRelativePath = 0
