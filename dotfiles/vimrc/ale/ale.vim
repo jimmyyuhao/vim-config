@@ -35,7 +35,7 @@ let g:ale_c_clang_options = '-std=c++11 -Wall'
 " let b:ale_c_clangcheck_executable = '/home/yuhao/.local/bin/clang-check'
 " let b:ale_c_clangd_executable  = '/home/yuhao/.local/bin/clangd'
 
-let g:ale_enabled=1
+let g:ale_enabled=0
 " let b:ale_enabled=1
 
 
