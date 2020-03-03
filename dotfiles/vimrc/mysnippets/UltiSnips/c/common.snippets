@@ -25,6 +25,65 @@ int main(int argc, char *argv[])
 }
 endsnippet
 
+##
+# TODO section
+snippet sniptodo "TODO "
+/*! TODO: ${1:Todo description here}
+*  \todo $1
+*/
+endsnippet
+##
+## Types
+# typedef
+snippet sniptypedef
+typedef ${1:int} ${2:MyCustomType};
+endsnippet
+
+snippet sniptypedefstruct
+/*! \struct $1
+*  \brief ${3:Brief struct description}
+*
+*  ${4:Detailed description}
+*/
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
+	int ${2:Data} /*!< ${4:Description} */
+}${5: /* optional variable list */};
+# typedef struct
+endsnippet
+
+snippet sniptypedefstructlocal
+/*! \struct $2
+*  \brief ${5:Brief struct description}
+*
+*  ${6:Detailed description}
+*/
+	typedef struct ${2:_$1 }{
+	int m_${3:Data}; /*!< ${4:Description} */
+} ${1:`!p snip.rv = (snip.basename or "name") + "_t"`};
+endsnippet
+
+snippet snipenum
+/*! \enum $1
+*
+*  ${2:Detailed description}
+*/
+enum ${1:name} { 
+	${0},
+	${2},
+	};
+endsnippet
+
+snippet typedefenum
+/*! \enum $2
+*
+*  ${4:Detailed description}
+*/
+typedef enum {
+	${1:Data} /*!< ${3:Description} */
+} ${2:foo};
+endsnippet
+
+
 snippet snipswitch
 switch (${1:var})
 {
@@ -89,7 +148,7 @@ ${1:void} ${2:function_name}($3)
 }
 endsnippet
 
-snippet snipcfuncvarparam "c var param function" 
+snippet snipcfuncvarparam "c var param function"
 int simple(int num,...)
 {
 	int i, result=0;

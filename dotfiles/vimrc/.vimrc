@@ -88,7 +88,7 @@ source ~/mytools/dotfiles/vimrc/easyclipring/easyclipring.vim
 source ~/mytools/dotfiles/vimrc/ale/ale.vim
 source ~/mytools/dotfiles/vimrc/vim-json-line-format/vim-json-line-format.vim
 source ~/mytools/dotfiles/vimrc/vim-eighties/vim-eighties.vim
-source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
+" source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 
 
 
