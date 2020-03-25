@@ -39,7 +39,7 @@ Plug 'mfukar/robotframework-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'inkarkat/vim-ingo-library'
-"Requires the ingo-library.vim plugin (vimscript #4433), 
+"Requires the ingo-library.vim plugin (vimscript #4433),
 Plug 'inkarkat/vim-mark'
 Plug 'svermeulen/vim-easyclip'
 Plug 'valloric/listtoggle'
@@ -56,6 +56,9 @@ Plug 'xolox/vim-misc'
 Plug 'nathanalderson/yang.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'kkoomen/vim-doge'
+Plug 'dhruvasagar/vim-zoom'
+Plug 'puremourning/vimspector'
+Plug 'skywind3000/vim-terminal-help'
 call plug#end()
 
 source ~/mytools/dotfiles/vimrc/vimlocal/local.vim
@@ -88,6 +91,7 @@ source ~/mytools/dotfiles/vimrc/easyclipring/easyclipring.vim
 source ~/mytools/dotfiles/vimrc/ale/ale.vim
 source ~/mytools/dotfiles/vimrc/vim-json-line-format/vim-json-line-format.vim
 source ~/mytools/dotfiles/vimrc/vim-eighties/vim-eighties.vim
+source ~/mytools/dotfiles/vimrc/vim-zoom/vim-zoom.vim
 " source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 
 

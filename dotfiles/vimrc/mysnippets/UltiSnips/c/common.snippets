@@ -139,6 +139,12 @@ endsnippet
 
 snippet sniptypedefptrtofunc "typedef a pointer to a func"
 typedef ${1:returnType} (*${2:Name})(${3:Params});
+//can declare with $1 (*$2)($3) =nullptr;
+endsnippet
+
+snippet sniptypedefptrtoarray "typedef a pointer to a array"
+typedef ${1:array type} (*${2:Name})[${3:array size}];
+//can declare with $1 (*$2)[$3] =nullptr;
 endsnippet
 
 snippet snipcfunc "c function" b

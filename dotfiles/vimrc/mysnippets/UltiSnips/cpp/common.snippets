@@ -53,6 +53,16 @@ namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
 }${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
 endsnippet
 
+snippet snipusingdeclarefunc "using declare to a func"
+using ${1:Name}=${2:returnType} (${3:Params});
+$1 ${4:funcName};//declare funcName
+$1 * ${4:funcName};//declare a func ptr
+endsnippet
+
+snippet snipusingptrtofunc "using a pointer to a func"
+using ${1:pName}=${2:returnType}(*)(${3:Params});
+$1 ${4:pfuncName};//declare a func ptr
+endsnippet
 
 snippet tp "template <typename ..> (template)"
 template <typename ${1:_InputIter}>
