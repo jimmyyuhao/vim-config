@@ -1,0 +1,1 @@
+ cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_INSTALL_PREFIX=/home/yuhao/opt/clang10 -G "Unix Makefiles" ../llvm

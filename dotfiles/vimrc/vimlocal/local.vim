@@ -50,7 +50,6 @@ set cindent
 set nu
 set ruler
 set hlsearch
-set backspace=2
 
 if has("gui")
   set guioptions -=m "remove menu bar
