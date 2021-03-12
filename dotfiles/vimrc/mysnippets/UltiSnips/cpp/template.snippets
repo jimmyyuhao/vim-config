@@ -30,9 +30,40 @@ endglobal
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet snipforv "$1.begin(), $1.end() (beginend)"
-for(auto iter=${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(); iter!=$1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end();iter++){
-	${VISUAL}$2
+snippet sniptemplatefunc "templatefunc"
+template<typename _T0,typename _T1,typename _T2>
+_T0 ${1:funcname}(_T0 & ${2:param0}, _T1 * ${3:parma1})
+{
+	return;
+}
+endsnippet
+
+snippet sniptemplateclass "templateclass"
+template<typename _T> class ${1:classname}
+{
+	typedef _T valuetype;
+	typedef typename std::vector<_T>::sizetype sizetype;
+public:
+	$1();
+	sizetype size(){
+		if(data==nullptr){
+		return 0;
+		}
+		return *data.size();
+	}
+	bool check(const _T val){
+		if(*data.find(val)){return true;}
+		return false;
+	}
+	void push_back(const _T &val){
+		data->push_back(val);
+	}
+	void push_back(const _T &&val){
+		data->push_back(std::move(val));
+	}
+
+private:
+	std::uniqueptr<std::vector<_T> > data;
 }
 endsnippet
 

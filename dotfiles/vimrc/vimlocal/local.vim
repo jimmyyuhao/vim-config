@@ -6,7 +6,7 @@ set shortmess=atI
 set ts=4
 set expandtab
 
-set fileencoding=utf-8,ucs-bom,utf-16,gb2312,gbk,big5,gb18030,cp936,latin1
+set fileencoding=utf-8
 set termencoding=utf-8
 set encoding=utf-8
 
