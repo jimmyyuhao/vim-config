@@ -9,9 +9,10 @@ priority -49
 ###########################################################################
 snippet snipreadfile "read file (readF)"
 	std::vector<char> v;
+	#define MAX_LINE_CNT 1024
 	if (FILE *fp = fopen(${1:"filename"}, "r"))//mode can be r r+ w w+ etc ,press K for fopen info
 	{
-		char buf[1024];
+		char buf[MAX_LINE_CNT];
 		while(size_t len = fread(buf, 1, sizeof(buf), fp))
 			v.insert(v.end(), buf, buf + len);
 		fclose(fp);

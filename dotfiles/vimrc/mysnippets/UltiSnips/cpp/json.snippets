@@ -5,15 +5,36 @@ priority -49
 ###########################################################################
 #			    Global functions 						  #
 ###########################################################################
+
+global !p
+
+def write_docstring_args(arglist, snip):
+	args = str(arglist).split(',')
+
+	if len(args) > 1:
+		c = 0
+		for arg in args:
+			if c == 0:
+				snip.rv += arg
+				c = 1
+			else:
+				snip += '*       : %s' % arg.strip()
+	else:
+		snip.rv = args[0]
+
+endglobal
+
+###########################################################################
+###########################################################################
 snippet snipreadjsonfile "read file (readF)"
 #include "json.hpp"
 #include <fstream>
 #include <iostream>
 using namespace std;
 using json = nlohmann::json;
-	json j;			// 创建 json 对象
-	ifstream jfile("test.json");
-	jfile >> j;		// 以文件流形式读取 json 文件
-	float pi = j.at("pi");
-	bool happy = j.at("happy");
+json j;			// 创建 json 对象
+ifstream jfile("test.json");
+jfile >> j;		// 以文件流形式读取 json 文件
+float pi = j.at("pi");
+bool happy = j.at("happy");
 endsnippet

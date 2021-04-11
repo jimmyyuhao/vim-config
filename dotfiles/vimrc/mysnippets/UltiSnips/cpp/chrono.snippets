@@ -1,0 +1,87 @@
+priority -50
+extends c
+# We want to overwrite everything in parent ft.
+priority -49
+###########################################################################
+#			    Global functions 						  #
+###########################################################################
+
+global !p
+
+def write_docstring_args(arglist, snip):
+	args = str(arglist).split(',')
+
+	if len(args) > 1:
+		c = 0
+		for arg in args:
+			if c == 0:
+				snip.rv += arg
+				c = 1
+			else:
+				snip += '*       : %s' % arg.strip()
+	else:
+		snip.rv = args[0]
+
+endglobal
+
+###########################################################################
+
+snippet sniptimegettime "time gettime"
+include <time.h>
+time_t timep;
+time(&timep); /*获取time_t类型的当前时间*/
+endsnippet
+
+snippet sniptimegettimestring "time gettimestring"
+#include <ctime>
+time_t timep;
+time(&timep); /*获取time_t类型当前时间*/
+/*转换为常见的字符串：Fri Jan 11 17:04:08 2008*/
+printf("%s", ctime(&timep));
+endsnippet
+
+snippet sniptimegettimestring1 "time gettimestring high_resolution"
+high_resolution_clock::time_point p = high_resolution_clock::now();
+milliseconds ms = duration_cast<milliseconds>(p.time_since_epoch());
+seconds s = duration_cast<seconds>(ms);
+std::time_t t = s.count();
+std::size_t fractional_seconds = ms.count() % 1000;
+std::cout << std::ctime(&t) << std::endl;
+std::cout << fractional_seconds << std::endl;
+endsnippet
+
+snippet snipchronoNow "snipchronoNow"
+#include <chrono>
+//定义毫秒级别的时钟类型
+using  microClock_type = chrono::time_point<chrono::system_clock, chrono::milliseconds>;
+microClock_type tp1 = chrono::time_point_cast<chrono::milliseconds>(chrono::system_clock::now());
+cout << "to epoch : " <<tp1.time_since_epoch().count() << "s" <<endl;
+endsnippet
+
+snippet snipchronoTimeCost "snipchronoTimeCost"
+#include <chrono>
+std::chrono::steady_clock::time_point  now = std::chrono::steady_clock::now();
+cout<<"print cost some time"<<endl;
+auto t2 = std::chrono::steady_clock::now();
+std::chrono::duration<double> time_span = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - now);
+printf("%f\n",time_span);
+std::cout << "It took me " << time_span.count() << " seconds.";
+endsnippet
+
+snippet snipchronoCast "snipchronoCast"
+#include <chrono>
+//定义毫秒级别的时钟类型
+using  microClock_type = chrono::time_point<chrono::system_clock, chrono::milliseconds>;
+microClock_type tp1 = chrono::time_point_cast<chrono::milliseconds>(chrono::system_clock::now());
+cout << "to epoch : " <<tp1.time_since_epoch().count() << "s" <<endl;
+endsnippet
+
+snippet snipchronototime_t "snipchrono To std::time_t"
+#include <chrono>
+#include <ctime>
+chrono::time_point<chrono::system_clock, chrono::milliseconds> tp2 = chrono::system_clock::now();
+//time_t 这种类型就是用来存储从1970年到现在经过了多少秒
+std::time_t tt = chrono::system_clock::to_time_t(tp2);
+cout <<tt<<endl;
+
+endsnippet
