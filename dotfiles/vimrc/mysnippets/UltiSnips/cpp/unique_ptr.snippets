@@ -34,5 +34,9 @@ snippet snipuniquePtr "uniqueptr"
 std::unique_ptr<int> u2 (nullptr);
 endsnippet
 
+snippet snipuniquePtrReaet "uniqueptr reset"
+std::unique_ptr<int> up (nullptr);
+up.reset (new int);
+endsnippet
 
 # vim:ft=snippets:
