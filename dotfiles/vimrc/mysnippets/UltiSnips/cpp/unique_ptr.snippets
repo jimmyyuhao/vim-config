@@ -34,9 +34,14 @@ snippet snipuniquePtr "uniqueptr"
 std::unique_ptr<int> u2 (nullptr);
 endsnippet
 
-snippet snipuniquePtrReaet "uniqueptr reset"
+snippet snipuniquePtrReset "uniqueptr reset"
 std::unique_ptr<int> up (nullptr);
 up.reset (new int);
 endsnippet
 
+snippet snipuniquePtrGet "uniqueptr get"
+std::unique_ptr<int> foo(new int(22));
+int * p = 0;
+p = foo.get(); //p指向的对象为22  
+endsnippet
 # vim:ft=snippets:
