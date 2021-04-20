@@ -1,11 +1,16 @@
+priority -50
+extends c
 
+snippet snipmacrowith# "marco with #" 
 #define NAME Bob
-
 #define _STRINGYFY(x) #x
 #define STRINGYFY(x) _STRINGYFY(x)
-
 char *myName1 = _STRINGYFY(NAME);
 char *myName2 = STRINGYFY(NAME);
 
 // myName1: "NAME"
 // myName2: "Bob" ，为预期结果
+endsnippet
+
+# We want to overwrite everything in parent ft.
+priority -49
