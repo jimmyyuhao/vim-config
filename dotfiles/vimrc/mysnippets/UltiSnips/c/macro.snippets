@@ -12,5 +12,23 @@ char *myName2 = STRINGYFY(NAME);
 // myName2: "Bob" ，为预期结果
 endsnippet
 
+snippet snipmacrowith## "marco with ##" 
+#define _STRINGIFY(x) #x
+#define STRINGIFY(x) _STRINGIFY(x)
+#define _CONCAT(A, B) A##B
+#define CONCAT(A, B) _CONCAT(A, B)
+#define CONCATCOUNTER(A) CONCAT(A, __COUNTER__)
+    char *param0 = STRINGIFY(CONCATCOUNTER(param));
+    char *param1 = STRINGIFY(CONCATCOUNTER(param));
+    char *param2 = STRINGIFY(CONCATCOUNTER(param));
+    /** 上边宏展开为:
+     char *param0 = "param0";
+     char *param1 = "param1";
+     char *param2 = "param2";
+     */
+endsnippet
+
+
+
 # We want to overwrite everything in parent ft.
 priority -49
