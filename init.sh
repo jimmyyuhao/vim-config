@@ -19,6 +19,7 @@ sudo apt-get install autogen
 sudo apt-get install automake
 sudo apt-get install autoconf
 sudo apt-get install libtool
+sudo apt-get install bear
 sudo apt-get install libiberty-dev
 
 sudo apt-get install xterm
@@ -28,3 +29,4 @@ sudo apt-get install vim
 sudo apt-get install zsh
 sudo apt-get install connect-proxy
 sudo apt-get install ttf-wqy-zenhei
+sudo apt-get install silversearcher-ag
