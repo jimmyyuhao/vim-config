@@ -15,8 +15,8 @@ let mapleader=","
 let g:mapleader=","
 
 " 低亮度显示所在行，所在列
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 " 显示行号
 set number
