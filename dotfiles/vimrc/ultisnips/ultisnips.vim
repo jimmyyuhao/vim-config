@@ -1,5 +1,5 @@
 set runtimepath +=~/mytools/dotfiles/vimrc/mysnippets/
-let g:UltiSnipsUsePythonVersion = 2
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger = "<c-u>"
 let g:UltiSnipsListSnippets = "<c-l>"

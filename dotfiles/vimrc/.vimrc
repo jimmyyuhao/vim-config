@@ -56,6 +56,7 @@ Plug 'xolox/vim-misc'
 Plug 'nathanalderson/yang.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'kkoomen/vim-doge'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'dhruvasagar/vim-zoom'
 Plug 'puremourning/vimspector'
 Plug 'skywind3000/vim-terminal-help'
@@ -90,8 +91,10 @@ source ~/mytools/dotfiles/vimrc/DoxygenToolkit/DoxygenToolkit.vim
 source ~/mytools/dotfiles/vimrc/easyclipring/easyclipring.vim
 source ~/mytools/dotfiles/vimrc/ale/ale.vim
 source ~/mytools/dotfiles/vimrc/vim-json-line-format/vim-json-line-format.vim
-source ~/mytools/dotfiles/vimrc/vim-eighties/vim-eighties.vim
-source ~/mytools/dotfiles/vimrc/vim-zoom/vim-zoom.vim
+source ~/mytools/dotfiles/vimrc/vimspector/vimspector.vim
+source ~/mytools/dotfiles/vimrc/undotree/undotree.vim
+" source ~/mytools/dotfiles/vimrc/vim-eighties/vim-eighties.vim
+source ~/mytools/dotfiles/vimrc/vim-zoomwin/vim-zoomwin.vim
 " source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 
 

@@ -12,9 +12,9 @@ nmap <leader>gf y3e:split<CR><c-w><right><c-p><c-v>
 "gotoline
 nmap gl y3e4w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
 
-nmap <leader>gl y3e4w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
+nmap <leader>gl ^EF/wy3e<c-w><left><c-p><c-v><CR><c-w><right>3w"tyaw3b<c-w><left>:<c-r>t<CR>
 
-nmap <leader><leader>gl y3e4w"tyaw4b<c-w><left><c-p><c-v><CR>:<c-r>t<CR>
+nmap <leader><leader>gl y3e3w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
 
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_UseVersionControlTool=0
@@ -30,6 +30,8 @@ let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 let g:Lf_WildIgnore = {
-                \'dir':['.svn','.git','temp'],
-                \'file':['*.sw?','.bak','*.o','*.so']
+                \'dir':['.svn','.git','temp','tmp'],
+                \'file':['*.sw?','.bak','*.exe','*.py[co]','*.o','*.so']
                 \}
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_JumpToExistingWindow = 0

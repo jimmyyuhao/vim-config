@@ -1,6 +1,7 @@
 set nocompatible
 set backspace=indent,eol,start
-set shortmess=atI 
+" 启动的时候不显示那个援助乌干达儿童的提示
+set shortmess=atI
 
 "tab trans to 4 spaces
 set ts=4
@@ -58,6 +59,7 @@ endif
 
 "remap add mark for easy-clip already use m for "move"
 nnoremap gm m
+nnoremap <SPACE><SPACE> m0
 nnoremap g1 '1
 nnoremap g2 '2
 nnoremap g3 '3
@@ -67,6 +69,7 @@ nnoremap g6 '6
 nnoremap g7 '7
 nnoremap g8 '8
 nnoremap g9 '9
+nnoremap g<SPACE> '0
 
 "enable mouse
 set mouse=a
@@ -105,14 +108,9 @@ exec "set <m-x>=\ex"
 exec "set <m-y>=\ey"
 exec "set <m-z>=\ez"
 
-"jump forward or backward when using mouse
-nmap <c-m-d> <c-o>
-nmap <c-m-f> <c-i>
-nmap <C-R>y <c-p>expand("%:r")
-
 "tab control
-nmap <leader>tc :tabnew<CR>
-nmap <leader>td :tabc<CR>
+nmap <leader>tc :tabnew<RETURN>
+nmap <leader>td :tabc<RETURN>
 
 "goto c function name
 nnoremap <m-f> [[kf(b
@@ -135,14 +133,12 @@ endfun
 command Shell call Shell()
 
 "local list and quickfix keymap
-nnoremap <leader>qp :col<CR>
-nnoremap <leader>qn :cnew<CR>
-nnoremap <leader>lp :lol<CR>
-nnoremap <leader>ln :lnew<CR>
-nnoremap <leader>hp :col<CR>
-nnoremap <leader>qp :col<CR>
-nnoremap <leader>hn :chi<CR>
-nnoremap <leader>hl :lhi<CR>
+nnoremap <leader>qp :col<RETURN>
+nnoremap <leader>qn :cnew<RETURN>
+nnoremap <leader>lp :lol<RETURN>
+nnoremap <leader>ln :lnew<RETURN>
+nnoremap <leader>hp :chi<RETURN>
+nnoremap <leader>hl :lhi<RETURN>
 
 "gdb support
 :packadd termdebug
@@ -163,6 +159,11 @@ nmap <leader>N :Over<RETURN>
 nmap <leader>C :Continue<RETURN>
 nmap <leader>E :Eval<RETURN>
 nmap <leader>W :Winbar<RETURN>
+
+"window op
+nmap <c-w><c-j> <c-w>10-
+nmap <c-w><c-k> <c-w>10+
+
 if !has("unix")
 endif
 

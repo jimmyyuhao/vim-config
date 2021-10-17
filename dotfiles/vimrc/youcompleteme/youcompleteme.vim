@@ -22,14 +22,16 @@ let g:ycm_max_num_candidates = 30
 let g:ycm_max_num_identifier_candidates = 50
 let g:ycm_error_symbol = '错'
 let g:ycm_warning_symbol = '警'
+let g:ycm_auto_hover=''
+nmap <leader><leader>d <plug>(YCMHover)
 
-set completeopt=menu,menuone
+set completeopt=menu,menuone,popup
 
 let g:ycm_semantic_triggers =  {
            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
            \ 'cs,lua,javascript': ['re!\w{2}'],
-           \ }
+        \ }
 nmap gf :YcmCompleter GoToInclude<CR>
-nnoremap <silent> <F9> :YcmForceCompileAndDiagnostics<CR>:YcmDiags<CR>
+nnoremap <silent> <leader>l :YcmForceCompileAndDiagnostics<CR>:YcmDiags<CR>
 nmap <C-g> :YcmCompleter GoToDefinition <CR>
 nmap <leader><leader>f :YcmCompleter FixIt <CR>

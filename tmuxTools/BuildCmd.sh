@@ -30,6 +30,7 @@ sudo apt-get install xclip
 sudo apt-get install gawk
 sudo apt-get install bison
 sudo apt-get install fzf
+sudo apt-get install ruby
 cd $CURDIR/tmux/
 sh autogen.sh
 ./configure && make
