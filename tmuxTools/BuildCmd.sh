@@ -28,6 +28,8 @@ sudo apt-get install libncurses5-dev
 sudo apt-get install xsel
 sudo apt-get install xclip
 sudo apt-get install gawk
+sudo apt-get install bison
+sudo apt-get install fzf
 cd $CURDIR/tmux/
 sh autogen.sh
 ./configure && make
