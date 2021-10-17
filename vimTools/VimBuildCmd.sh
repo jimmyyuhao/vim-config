@@ -13,3 +13,10 @@ sudo ln -s  /usr/local/vim8/bin/vim /usr/local/bin/vim
 
 ./configure --disable-selinux --enable-perlinterp=yes --enable-pythoninterp=yes  --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-python3interp=yes  --with-python3-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/ --enable-rubyinterp=yes --enable-cscope --enable-gui=auto --with-features=huge --enable-multibyte --enable-xim --with-x --with-gnome --with-compiledby="goodfish" --prefix=/usr/local/
 
+sudo apt-get install universal-ctags
+sudo apt-get install global
+sudo apt-get install fzf
+sudo apt-get install bear
+sudo apt-get install astyle
+sudo apt-get install silversearcher-ag
+
