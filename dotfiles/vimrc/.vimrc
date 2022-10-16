@@ -60,6 +60,7 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'dhruvasagar/vim-zoom'
 Plug 'puremourning/vimspector'
 Plug 'skywind3000/vim-terminal-help'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 source ~/mytools/dotfiles/vimrc/vimlocal/local.vim

@@ -28,7 +28,7 @@ nmap <leader><leader>d <plug>(YCMHover)
 set completeopt=menu,menuone,popup
 
 let g:ycm_semantic_triggers =  {
-           \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+           \ 'c,cpp,python,java,go,erlang,perl,rust': ['re!\w{2}'],
            \ 'cs,lua,javascript': ['re!\w{2}'],
         \ }
 nmap gf :YcmCompleter GoToInclude<CR>
