@@ -1,0 +1,34 @@
+#################
+# Rust Snippets #
+#################
+
+snippet snipTraitDeclare "trait declare" b
+pub trait ${1:traitName}
+	fn ${2:traitFuncName}(&self)->${3:returnType};
+endsnippet
+
+snippet snipTraitImplement "trait Implement on a Type" b
+impl ${1:traitName} for ${2:structTypeName}{
+	fn ${3:traitFuncName}(&self)->${4:returnType}{
+		/*code block*/
+	}
+}
+endsnippet
+
+snippet snipTraitAsParam "traits as parameters" b
+pub fn ${2:funcName}(${3:varName}:&impl ${1:traitName}){
+	$3.${4:traitFunc}();
+}
+endsnippet
+
+snippet snipTraitWhere "traits as parameters by using where" b
+fn ${1:funcName}<T,U>(t:&T,u:&U)->i32
+	where T:${2:trait1Name}+${3:trait2Name},
+		U:${4:trait3Name}+${5:trait4Name}{
+		t.$2();
+		t.$3();
+		u.$4();
+		u.$5();
+}
+endsnippet
+

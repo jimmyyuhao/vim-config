@@ -1,0 +1,31 @@
+priority -49
+#################
+# Rust Snippets #
+#################
+
+snippet snipStructFeild "Struct field definition" w
+${1:name}:${2:type},
+endsnippet
+
+snippet snipStructInstance "Struct instance init" w
+let ${1:name}${2:type}{
+${3:stringMember}:String:from("abc"),
+${4:boolMember}:true,
+${5:valMember}:1,
+}
+endsnippet
+
+snippet snipStructInstanceInStruct "Struct instance init" w
+${1:structName}:${2:structType}{
+${3:stringMember}:String:from("abc"),
+${4:boolMember}:true,
+endsnippet
+
+snippet snipFuncInStruct "Struct instance init" w
+impl ${1:structType}
+fn ${2:funcName}(&self)->${3:retType}{
+	/*code block*/
+	return val
+}
+endsnippet
+

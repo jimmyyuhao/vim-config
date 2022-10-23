@@ -1,0 +1,31 @@
+priority -49
+#################
+# Rust Snippets #
+#################
+
+snippet snipGenericFunc "generic func" b
+pub fn ${1:functionName}<T>( ${2:inputVal1} ) -> ${3:retType}{
+
+}
+endsnippet
+
+snippet snipGenericStruct "generic struct" b
+struct ${1:functionName}<T, U> {
+	${2: member1Name}: T,
+	${3: member2Name}: U,
+}
+endsnippet
+
+snippet snipGenericEnum "generic enum" b
+enum ${1: enumName}<T> (
+	${2:val1Name}(T),
+	${3:val2Name}(T),
+	None,
+)
+endsnippet
+
+snippet snipGenericEnum "generic enum" b
+impl<T> ${1:structName}<T> (
+	fn ${2:funcName}(&self) -> &T (&self.x)
+)
+endsnippet

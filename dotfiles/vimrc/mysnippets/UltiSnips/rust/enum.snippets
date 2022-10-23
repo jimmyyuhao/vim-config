@@ -1,0 +1,15 @@
+priority -49
+#################
+
+# Rust Snippets #
+
+#################
+
+snippet snipEnum "enum normal"
+enum ${1:Type} (
+	${2: enumVal}(${3: associateType}),
+	${4: enumVal}(u8,u8,u8,u8),
+)
+	let a = $1::$4(1,2,3,4);
+	let b = $1::$2(String: :from("abc"));
+endsnippet

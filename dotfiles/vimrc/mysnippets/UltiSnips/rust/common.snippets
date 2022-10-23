@@ -1,0 +1,79 @@
+priority -49
+#############
+# Rust Snippets #
+##############
+
+snippet snipMain "Main function"
+pub fn main() {
+	${0}
+}
+endsnippet
+
+snippet snipMatch "normal match pattern"
+match ${1:input} {
+${2:value0} => ${3:return val}
+${4:value1} => {${5:code block}}
+other =>{/*code block*/}
+}
+endsnippet
+
+snippet snipMatch_ "normal match pattern end with_"
+match ${1:input} {
+${2:value0} => ${3:return val}
+${4:value1} => {${5:code block}}
+_ => {/*code block*/}
+}
+endsnippet
+
+snippet snipIfLet "if let (...)"
+	if let ${1:Some($2)} = $3 {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet snipIfLetElse "if let () else(..)"
+	let $(1:Some($2)) = $3 {
+		${0:${VISUAL}}
+	}
+	else{
+		${4:code block}
+	}
+endsnippet
+
+snippet snipMod "create mod"
+	mod ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} {
+		${0}
+	} /* $1 */
+endsnippet
+
+snippet snipUse "use"
+	use ${1:std: :$2};
+endsnippet
+
+snippet snipUseAs "use .. as ...;" b
+	use ${1:std::$2} as $3;
+endsnippet
+
+snippet snipUseMulti "use multi..." b
+	use ${1:std::}{${2:first}, ${3:second}};
+endsnippet
+
+snippet snipUseAll "use multi..." b
+	use ${1:std::}::*;
+endsnippet
+
+snippet snipTestFunc "Unit test function"
+	#[test]
+	fn ${1:function_name}_test() {
+		${0}
+	}
+endsnippet
+
+snippet snipTestMod "Test module" b
+	#[cfg(test)]
+	mod tests {
+		use super::${1:*};
+
+		test${0}
+	}
+endsnippet
