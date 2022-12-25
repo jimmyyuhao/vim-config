@@ -61,6 +61,7 @@ Plug 'dhruvasagar/vim-zoom'
 Plug 'puremourning/vimspector'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 call plug#end()
 
 source ~/mytools/dotfiles/vimrc/vimlocal/local.vim

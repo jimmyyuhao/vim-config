@@ -6,6 +6,8 @@ ZSH_THEME="agnoster"
 source ~/mytools/zshTools/.oh-my-zsh/plugins/autojump/autojump.plugin.zsh
 export PATH=$PATH:~/opt/bin/
 export PATH=$PATH:~/mytools/tmuxTools/.tmux/plugins/tmux-butler/scripts/
+export GOPROXY=https://goproxy.cngoproxy.cn
+export GO111MODULE=on
 
 
 # for wsl docker

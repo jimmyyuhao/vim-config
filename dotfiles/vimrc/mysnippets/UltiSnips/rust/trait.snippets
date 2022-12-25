@@ -3,8 +3,9 @@
 #################
 
 snippet snipTraitDeclare "trait declare" b
-pub trait ${1:traitName}
+pub trait ${1:traitName}{
 	fn ${2:traitFuncName}(&self)->${3:returnType};
+}
 endsnippet
 
 snippet snipTraitImplement "trait Implement on a Type" b
@@ -15,9 +16,13 @@ impl ${1:traitName} for ${2:structTypeName}{
 }
 endsnippet
 
-snippet snipTraitAsParam "traits as parameters" b
-pub fn ${2:funcName}(${3:varName}:&impl ${1:traitName}){
-	$3.${4:traitFunc}();
+snippet snipTraitAsParam "traits as parameters,input type should support the trait" b
+pub fn ${3:funcName}(${4:varName}:&impl ${1:traitName}+${2:traitName}){
+}
+endsnippet
+
+snippet snipTraitBound "traits as parameters,use trait bound" b
+pub fn ${4:funcName}<T:${1:traitName}+${2:traitName}>(${3:varName}:&T){
 }
 endsnippet
 
@@ -29,6 +34,12 @@ fn ${1:funcName}<T,U>(t:&T,u:&U)->i32
 		t.$3();
 		u.$4();
 		u.$5();
+}
+endsnippet
+
+snippet snipReturnTrait "return a traits" b
+fn ${1:funcName}(/*input param*/)->impl ${2:traitName} {
+	/*fn body*/
 }
 endsnippet
 
