@@ -1,0 +1,6 @@
+
+七牛： 
+export GOPROXY=https://goproxy.cngoproxy.cn
+
+阿里云：
+export GOPROXY=https://mirrors.aliyun.com/goproxy
