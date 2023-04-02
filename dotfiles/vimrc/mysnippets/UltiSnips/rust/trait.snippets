@@ -2,6 +2,14 @@
 # Rust Snippets #
 #################
 
+snippet snipDebugTrait "debug trait" b
+#[derive(Debug)]
+struct Abc{
+
+}
+println!("rect1 is {:#?}", abc);
+endsnippet
+
 snippet snipTraitDeclare "trait declare" b
 pub trait ${1:traitName}{
 	fn ${2:traitFuncName}(&self)->${3:returnType};

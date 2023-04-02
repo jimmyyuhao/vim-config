@@ -1,1 +1,8 @@
 curl https://sh.rustup.rs -sSf | sh
+
+1.国内 crates.io 源太慢，有解决办法：
+Rustcc 联合 LongHash 提供了国内 Rust 开发者专属 crates.io 镜像。把下面内容填充到你的 ~/.cargo/config 文件中（没有就创建一个）。
+[source.crates-io]
+replace-with = "rustcc"
+[source.rustcc]
+registry = "git://crates.rustcc.cn/crates.io-index"

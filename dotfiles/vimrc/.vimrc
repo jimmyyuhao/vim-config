@@ -62,6 +62,10 @@ Plug 'puremourning/vimspector'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+
 call plug#end()
 
 source ~/mytools/dotfiles/vimrc/vimlocal/local.vim
@@ -97,6 +101,8 @@ source ~/mytools/dotfiles/vimrc/vimspector/vimspector.vim
 source ~/mytools/dotfiles/vimrc/undotree/undotree.vim
 " source ~/mytools/dotfiles/vimrc/vim-eighties/vim-eighties.vim
 source ~/mytools/dotfiles/vimrc/vim-zoomwin/vim-zoomwin.vim
+source ~/mytools/dotfiles/vimrc/vim-markdown/vim-markdown.vim
+source ~/mytools/dotfiles/vimrc/markdown-preview/markdown-preview.vim
 " source ~/mytools/dotfiles/vimrc/vim-smooth-scroll/vim-smooth-scroll.vim
 
 

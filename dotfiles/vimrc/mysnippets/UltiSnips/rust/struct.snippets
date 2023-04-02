@@ -3,25 +3,28 @@ priority -49
 # Rust Snippets #
 #################
 
-snippet snipStructFeild "Struct field definition" w
-${1:name}:${2:type},
+snippet snipStructDefine "Struct definition" w
+struct ${1:structName}{
+	${2:name}:${3:type},
+}
 endsnippet
 
 snippet snipStructInstance "Struct instance init" w
 let ${1:name}${2:type}{
-${3:stringMember}:String:from("abc"),
-${4:boolMember}:true,
-${5:valMember}:1,
+	${3:stringMember}:String:from("abc"),
+	${4:boolMember}:true,
+	${5:valMember}:1,
 }
 endsnippet
 
-snippet snipStructInstanceInStruct "Struct instance init" w
+snippet snipStructInstanceInStruct "Struct instance in struct" w
 ${1:structName}:${2:structType}{
-${3:stringMember}:String:from("abc"),
-${4:boolMember}:true,
+	${3:stringMember}:String:from("abc"),
+	${4:boolMember}:true,
+}
 endsnippet
 
-snippet snipFuncInStruct "Struct instance init" w
+snippet snipMethodInStruct "Struct method in struct" w
 impl ${1:structType}
 fn ${2:funcName}(&self)->${3:retType}{
 	/*code block*/
@@ -29,3 +32,9 @@ fn ${2:funcName}(&self)->${3:retType}{
 }
 endsnippet
 
+snippet snipStructInstInitFromAnotherInst "Struct Inst Init From Another Inst" w
+let user2 = User {
+	email: String::from("another@example.com"),
+	..user1
+};
+endsnippet

@@ -3,6 +3,11 @@ priority -49
 # Rust Snippets #
 ##############
 
+snippet snipGeneralFunc "General function"
+pub fn ${1:_func_name}(${2:paramName}: ${3:paramType}, ${4:paramName}: ${5:paramType}) ->${6:returnType}{
+	${7:$2+$4}//表达式返回值
+}
+endsnippet
 snippet snipMain "Main function"
 pub fn main() {
 	${0}
@@ -25,55 +30,93 @@ _ => {/*code block*/}
 }
 endsnippet
 
+snippet snipIf "General if "
+if ${1:x > 0}{
+	${0:${VISUAL}}
+}else if ${2:x == 0}{
+
+}else{
+
+}
+endsnippet
+
+snippet snipLetIf "General let if "
+let ${1:number} = if ${2:condition} {5} else {6};
+endsnippet
+
 snippet snipIfLet "if let (...)"
-	if let ${1:Some($2)} = $3 {
-		${0:${VISUAL}}
-	}
+if let ${1:Some($2)} = $3 {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet snipIfLetElse "if let () else(..)"
-	let $(1:Some($2)) = $3 {
-		${0:${VISUAL}}
-	}
-	else{
-		${4:code block}
-	}
+let $(1:Some($2)) = $3 {
+	${0:${VISUAL}}
+}
+else{
+	${4:code block}
+}
+endsnippet
+
+snippet snipFor "General for "
+for ${1:element} in ${2:list} {
+	${3:println!("the value is: {element}");}
+}
+endsnippet
+
+snippet snipForReverse "General for reverse "
+for ${1:element} in ${2:list}.rev() {
+	${3:println!("the value is: {element}");}
+}
+endsnippet
+
+snippet snipWhile "General while "
+while ${1:number != 0} {
+	${2: number -= 1}
+}
+endsnippet
+
+snippet snipLoop "General loop "
+loop {
+	${1:do something}
+}
 endsnippet
 
 snippet snipMod "create mod"
-	mod ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} {
-		${0}
-	} /* $1 */
+mod ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} {
+	${0}
+} /* $1 */
 endsnippet
 
 snippet snipUse "use"
-	use ${1:std: :$2};
+use ${1:std: :$2};
 endsnippet
 
 snippet snipUseAs "use .. as ...;" b
-	use ${1:std::$2} as $3;
+use ${1:std::$2} as $3;
 endsnippet
 
 snippet snipUseMulti "use multi..." b
-	use ${1:std::}{${2:first}, ${3:second}};
+use ${1:std::}{${2:first}, ${3:second}};
 endsnippet
 
 snippet snipUseAll "use multi..." b
-	use ${1:std::}::*;
+use ${1:std::}::*;
 endsnippet
 
 snippet snipTestFunc "Unit test function"
-	#[test]
-	fn ${1:function_name}_test() {
-		${0}
-	}
+#[test]
+fn ${1:function_name}_test() {
+	${0}
+}
 endsnippet
 
 snippet snipTestMod "Test module" b
-	#[cfg(test)]
-	mod tests {
-		use super::${1:*};
+#[cfg(test)]
+mod tests {
+	use super::${1:*};
 
-		test${0}
-	}
+	test${0}
+}
 endsnippet

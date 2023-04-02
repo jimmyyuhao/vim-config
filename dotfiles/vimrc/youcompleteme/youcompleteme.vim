@@ -31,6 +31,7 @@ let g:ycm_semantic_triggers =  {
            \ 'c,cpp,python,java,go,erlang,perl,rust': ['re!\w{2}'],
            \ 'cs,lua,javascript': ['re!\w{2}'],
         \ }
+let g:ycm_filetype_blacklist = {'notes': 1, 'netrw': 1, 'unite': 1, 'ycm_nofiletype': 1, 'pandoc': 1, 'tagbar': 1, 'leaderf': 1, 'vimwiki': 1, 'text': 1, 'infolog': 1, 'mail': 1}
 nmap gf :YcmCompleter GoToInclude<CR>
 nnoremap <silent> <leader>l :YcmForceCompileAndDiagnostics<CR>:YcmDiags<CR>
 nmap <C-g> :YcmCompleter GoToDefinition <CR>
