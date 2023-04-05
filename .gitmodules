@@ -31,3 +31,12 @@
 [submodule "zshTools/oh-my-zsh"]
 	path = zshTools/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vimTools/ThirdPartyTools/fzf"]
+	path = zshTools/ThirdPartyTools/oh-my-zsh
+	url = https://github.com/junegunn/fzf.git
+[submodule "sysTools/ranger"]
+	path = sysTools/ranger
+	url = https://github.com/ranger/ranger.git
+[submodule "sysTools/i3wm"]
+	path = sysTools/i3wm
+	url = https://github.com/i3/i3.git

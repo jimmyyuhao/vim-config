@@ -12,7 +12,7 @@ nnoremap <silent> <F5> :AsyncRun -raw -cwd=$(VIM_FILEDIR) "$(VIM_FILEDIR)/$(VIM_
 autocmd FileType cpp nnoremap <silent> <F7> :AsyncRun ./vimbuild.sh <CR>
 autocmd FileType python nnoremap <silent> <F7> :PymodeRun <CR>
 autocmd FileType c nnoremap <silent> <F7> :!gcc % && ./a.out <CR>
-autocmd FileType rust nnoremap <silent> <F7> :AsyncRun rustc ./src/main.rs && ./main <CR>
+autocmd FileType rust nnoremap <silent> <F7> :AsyncRun cargo build && cargo run <CR>
 
 nnoremap <silent><F9> :YcmForceCompileAndDiagnostics<CR>:YcmDiags<CR>
 " nnoremap <silent> <F9> :AsyncRun gcc -v -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>

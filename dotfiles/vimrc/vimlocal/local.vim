@@ -72,12 +72,10 @@ nnoremap g9 '9
 nnoremap g<SPACE> '0
 
 "enable mouse
-set mouse=a
+" set mouse=a
 
 "copy whole line to clipboard
 set clipboard=unnamed
-
-
 
 set ttimeout ttimeoutlen=100
 "enable Alt key

@@ -59,6 +59,17 @@ else{
 }
 endsnippet
 
+snippet snipIfLetTuple "if let (Some(name), Some(addr)...) = (info.name, info.addr...)"
+fn check_info(info: Info) -> bool {
+	if let (Some(name), Some(addr), Some(phone)) = (info.name, info.addr, info.phone) {
+	        println!("name{:?},addr:{:?},phone:{:?}", name, addr, phone);
+			        return true;
+					    
+	}
+	false
+}
+endsnippet
+
 snippet snipFor "General for "
 for ${1:element} in ${2:list} {
 	${3:println!("the value is: {element}");}

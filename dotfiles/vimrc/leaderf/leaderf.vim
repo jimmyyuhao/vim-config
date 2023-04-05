@@ -1,6 +1,6 @@
 let g:Lf_ShortcutF = '<c-p>'
 
-noremap <leader>f :LeaderfFunction!<cr>
+noremap <leader>f :LeaderfFile<cr>
 
 noremap <m-n> :LeaderfMru<cr>
 noremap <m-p> :LeaderfBuffer<cr>
@@ -15,7 +15,7 @@ nmap gl y3e4w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
 nmap <leader>gl ^EF/wy3e<c-w><left><c-p><c-v><CR><c-w><right>3w"tyaw3b<c-w><left>:<c-r>t<CR>
 
 nmap <leader><leader>gl y3e3w"tyaw4b<c-w><up><c-p><c-v><CR>:<c-r>t<CR>
-
+nmap <leader>m :LeaderfMarks<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_UseVersionControlTool=0
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
@@ -35,3 +35,10 @@ let g:Lf_WildIgnore = {
                 \}
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_JumpToExistingWindow = 0
+" Show icons, icons are shown by default
+let g:Lf_ShowDevIcons = 1
+" " For GUI vim, the icon font can be specify like this, for example
+let g:Lf_DevIconsFont = "DroidSansMono Nerd Font Mono"
+" " If needs
+" set ambiwidth=double"
+" "
