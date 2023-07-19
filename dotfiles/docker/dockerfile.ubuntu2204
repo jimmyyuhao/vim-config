@@ -1,0 +1,32 @@
+FROM ubuntu:22.04
+ENV MYPATH /usr/local
+WORKDIR $MYPATH
+
+# change apt/config/source.list
+RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+# system basic tools
+RUN export DEBIAN_FRONTEND=noninteractive && \
+    apt-get update && \
+    apt-get -y -q install dialog curl sudo net-tools iputils-ping ssh sshfs flex bison gawk locales xubuntu-desktop && \
+    apt-get -y -q install xserver-xorg-core xserver-xorg-input-all xorgxrdp xrdp xfce4 xfce4-goodies && \
+    apt-get -y -q install xserver-xorg-hwe-18.04 zh-autoconvert zhcon xvfb firefox && \
+    apt-get -y -q install xubuntu-desktop && \
+    apt-get -y -q install fonts-inconsolata universal-ctags cppcheck linux-tools-generic && \
+    apt-get -y -q install systemctl bash && \
+    apt-get -y -q install libssl-doc libssl-dev libssl* libgtk2.0-dev libfuse2 libltdl7 liborcus* libncurses6 libncurses-dev libevent-2.1-7 libevent-dev libxt-dev libpqxx-dev && \
+    apt-get -y -q install build-essential && \
+    apt-get -y -q install linux-source cmake git pkg-config autogen expect cppman silversearcher-ag graphviz astyle kdiff3 zsh tmux clang gcc python3-pip global cppcheck vim vim-youcompleteme ruby-all-dev default-jre default-jdk maven gradle golang-1.18* cargo  && \
+    apt-get clean && apt-get autoclean
+
+# dev language
+## C C++
+
+## golang
+
+## rust
+
+## java
+
+
+CMD ["bash"]
+

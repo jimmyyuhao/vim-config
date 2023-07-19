@@ -1,0 +1,33 @@
+sudo apt-get install golang-1.18
+sudo apt-get install golang-1.18-go
+go env -w GOPROXY=https://goproxy.cn,direct
+go install golang.org/x/tools/gopls@latest
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo apt update
+apt list -a docker-ce
+sudo systemctl status docker
+sudo usermod -aG docker $USER
+sudo docker container run hello-world
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+使用下面命令就可以创建一个 kind 集群
+kind create cluster
+
+
+
+在卸载 Docker 之前，你最好 移除所有的容器，镜像，卷和网络。
+
+运行下面的命令停止所有正在运行的容器，并且移除所有的 docker 对象：
+
+docker container stop $(docker container ls -aq)
+docker system prune -a --volumes
+
+现在你可以使用apt像卸载其他软件包一样来卸载 Docker：
+
+sudo apt purge docker-ce
+sudo apt autoremove
