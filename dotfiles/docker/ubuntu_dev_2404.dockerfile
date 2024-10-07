@@ -8,8 +8,8 @@ FROM ubuntu:24.04
 # ENV no_proxy=10.*.*.*,localhost,127.0.0.0/8,::1,10.0.0.0/8,example.com.cn,example.intra,*example.intra,10.192.45.187,*.example.com.cn,.example.com.cn
 ENV DEBIAN_FRONTEND=noninteractive
 
-# RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/#' /etc/apt/sources.list.d/ubuntu.sources
-RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.aliyun.com/#' /etc/apt/sources.list.d/ubuntu.sources
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/#' /etc/apt/sources.list.d/ubuntu.sources
+# RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.example.com.cn/#' /etc/apt/sources.list.d/ubuntu.sources
 RUN cat /etc/apt/sources.list.d/ubuntu.sources
 
 RUN rm -f /etc/apt/apt.conf.d/docker-clean
