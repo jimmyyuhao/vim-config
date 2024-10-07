@@ -9,7 +9,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/#' /etc/apt/sources.list.d/ubuntu.sources
-RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.example.com.cn/#' /etc/apt/sources.list.d/ubuntu.sources
+RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.aliyun.com/#' /etc/apt/sources.list.d/ubuntu.sources
 RUN cat /etc/apt/sources.list.d/ubuntu.sources
 
 RUN rm -f /etc/apt/apt.conf.d/docker-clean
